@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+
+}
+
+ul li {
+    list-style: none;
+    padding: 15px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.container {
+    display: flex;
+
+}
+
+.outer-box {
+    display: flex;
+    background-color: white;
+    height: 90%;
+    width: 90vw;
+    margin: 0 auto;
+    /* position: relative; */
+}
+
+.left_side {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+#bigImage {
+    border-radius: 5px;
+    margin-top: 7px;
+    height: 480px;
+    /* h 487.5  w 650 */
+    width: 650px;
+}
+
+.pic1 {
+    border-radius: 5px;
+    height: 130px;
+    width: 141px;
+    margin-top: 30px;
+    display: inline-block;
+
+}
+
+.pic2,
+.pic3,
+.pic4 {
+    border-radius: 5px;
+    height: 130px;
+    width: 141px;
+    margin-top: 30px;
+    margin-left: 24px;
+    display: inline-block;
+
+}
+
+.right_side {
+    /*  Desc  */
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.name {
+    display: inline-block;
+    margin: 8px 0px 0px 0px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.content-container {
+    display: flex;
+}
+
+.desc-content {
+    margin-top: 20px;
+    width: 90%;
+    /* word-break: break-all; */
+    text-align: justify;
+}
+
+.rating-review {
+    margin: 15px 0px 8px -3px;
+
+}
+
+.price {
+    display: flex;
+}
+
+.real_price {
+    color: #212121;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.cutprice {
+    font-size: 16px;
+    vertical-align: middle;
+    color: #878787;
+    box-sizing: border-box;
+    margin-left: 12px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    margin: 3px 0 0 12px;
+    text-decoration: line-through;
+}
+
+.discount {
+    font-size: 16px;
+    font-weight: 500;
+    color: #388e3c;
+    letter-spacing: -0.2px;
+    box-sizing: border-box;
+    margin: 8px 0px 0px 15px;
+
+}
+
+.q_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: -20px;
+}
+
+#buyNowButton {
+    padding: 10px 150px;
+    margin: 20px;
+    font-size: 16px;
+    margin-right: 20px;
+    cursor: pointer;
+    border: 0px;
+    border-radius: 8px;
+    background-color: #36c23d;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 100ms ease-in-out;
+}
+
+#buyNowButton:hover {
+    background-color: #51e759;
+
+}
+
+.quantity-selector {
+    position: relative;
+}
+
+.quantity-box {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70px;
+    border-radius: 8px;
+}
+
+.arrow {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.quantity-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 1000;
+    max-height: 150px;
+    overflow-y: auto;
+    border-radius: 8px;
+
+
+
+}
+
+.quantity-options .option {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.quantity-options .option:hover {
+    background-color: #f1f1f1;
+}
+
+#quantity-name {
+    font-size: 0px;
+}
+
+@media screen and (max-width:1024px) {
+    .outer-box {
+        width: 96vw;
+    }
+
+    header {
+        height: 4vh;
+    }
+
+    #bigImage {
+        margin-top: 7px;
+        height: 350px;
+        width: 510px;
+    }
+
+    .pic1 {
+
+        height: 120px;
+        width: 116.85px;
+
+    }
+
+    .pic2,
+    .pic3,
+    .pic4 {
+
+        height: 120px;
+        width: 116.85px;
+        margin-left: 10px;
+
+    }
+
+    .smallpics {
+        margin-top: -15px;
+    }
+
+    #buyNowButton {
+        padding: 10px 128px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .outer-box {
+        width: 97vw;
+    }
+
+    #bigImage {
+        margin-top: -10px;
+        margin-left: -10px;
+        height: 350px;
+        width: 395px;
+    }
+
+    .name {
+        font-size: 26px;
+        margin-top: 10px;
+    }
+
+    .pic1 {
+
+        height: 90px;
+        width: 91.85px;
+
+    }
+
+    .pic2,
+    .pic3,
+    .pic4 {
+
+        height: 90px;
+        width: 91.85px;
+        margin-left: 5px;
+
+    }
+
+    .smallpics {
+        margin-top: -20px;
+        margin-left: -10px;
+    }
+
+    #buyNowButton {
+        padding: 10px 105px;
+
+    }
+
+    .q_container {
+        margin-left: -25px;
+    }
+
+    .quantity-box {
+        margin-left: -7px;
+        width: 60;
+    }
+
+
+}
+
+@media screen and (max-width: 426px) {
+    .container {
+        flex-direction: column;
+        /* Stack elements vertically */
+        align-items: center;
+
+    }
+
+    .left_side {
+
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 20px;
+        margin-top: 25px;
+    }
+
+    .right_side {
+
+        margin-left: 0;
+        margin-top: 20px;
+        /* Add margin on top to create space */
+        width: 100%;
+        /*Make the right side full width*/
+    }
+
+    .outer-box {
+        width: 99vw;
+    }
+
+    #bigImage {
+        display: flex;
+        justify-content: center;
+        margin-top: -15px;
+        margin-right: 10px;
+        height: 490px;
+        width: 400px;
+    }
+
+    .name {
+        font-size: 25px;
+        margin-top: -5px;
+        margin-left: 10px;
+        text-align: left;
+    }
+
+    .pic1 {
+
+        height: 90px;
+        width: 96px;
+        margin-left: 10px;
+
+    }
+
+    .pic2,
+    .pic3,
+    .pic4 {
+
+        height: 90px;
+        width: 96px;
+        margin-left: 1px;
+
+    }
+
+    .smallpics {
+
+        margin-top: -20px;
+        margin-left: -20px;
+        margin-right: 10px;
+    }
+
+    .desc-content {
+        width: 95%;
+        margin-right: 10px;
+    }
+
+    .rating-review {
+        font-size: 15px;
+        margin-left: 300px;
+    }
+
+    .price {
+
+        margin: -40px 0px 0px 30px;
+
+    }
+
+    .discount {
+        position: relative;
+        bottom: 15px;
+        right: 77px;
+        font-size: 12px;
+    }
+
+    .quantity-box {
+        bottom: -20px;
+        position: relative;
+        left: -217px;
+        width: 186px;
+        border-radius: 0px;
+        height: 70px;
+        margin: 0 0 0 0;
+    }
+
+    .quantity-options {
+        position: absolute;
+        left: -217px;
+    }
+
+    #quantity-name {
+        font-size: 15px;
+        position: relative;
+        top: 30px;
+    }
+
+    #buyNowButton {
+        position: relative;
+        border-radius: 0px;
+        margin: 30px 0 0 0;
+        left: 209px;
+        ;
+        bottom: -5px;
+        height: 70px;
+        width: 240px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 376px) {
+    .container {
+        flex-direction: column;
+        /* Stack elements vertically */
+        align-items: center;
+
+    }
+
+    .left_side {
+
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 20px;
+        margin-top: 25px;
+    }
+
+    .right_side {
+
+        margin-left: 0;
+        margin-top: 20px;
+        /* Add margin on top to create space */
+        width: 100%;
+        /*Make the right side full width*/
+    }
+
+    .outer-box {
+        width: 99vw;
+    }
+
+    #bigImage {
+        display: flex;
+        justify-content: center;
+        margin-top: -15px;
+        margin-right: 10px;
+        height: 490px;
+        width: 345px;
+    }
+
+    .name {
+        font-size: 25px;
+        margin-top: -5px;
+        margin-left: 10px;
+        text-align: left;
+    }
+
+    .pic1 {
+
+        height: 90px;
+        width: 82px;
+        margin-left: 10px;
+
+    }
+
+    .pic2,
+    .pic3,
+    .pic4 {
+
+        height: 90px;
+        width: 82px;
+        margin-left: 1px;
+
+    }
+
+    .smallpics {
+
+        margin-top: -20px;
+        margin-left: -20px;
+        margin-right: 10px;
+    }
+
+    .desc-content {
+        width: 95%;
+        text-align: justify;
+        word-spacing: 0%;
+        margin-right: 10px;
+    }
+
+    .rating-review {
+        font-size: 15px;
+        margin-left: 260px;
+    }
+
+    .price {
+
+        margin: -40px 0px 0px 30px;
+
+    }
+
+    .discount {
+        position: relative;
+        bottom: 15px;
+        right: 77px;
+        font-size: 12px;
+    }
+
+
+
+
+    .q_container {
+        margin-top: -5px;
+        margin-left: 0px;
+        margin-right: 0;
+        margin-top: 10px;
+        left: -269px;
+        width: 165px;
+        width: 50px;
+        border-radius: 0px;
+
+    }
+
+    .quantity-box {
+        bottom: -20px;
+        position: relative;
+        left: 37px;
+        width: 165px;
+        border-radius: 0px;
+        height: 70px;
+        margin: 0 0 0 0;
+    }
+
+    .quantity-options {
+        position: absolute;
+        left: 37px;
+    }
+
+    #quantity-name {
+        font-size: 15px;
+        position: relative;
+        top: 45px;
+    }
+
+    #buyNowButton {
+        position: relative;
+        /* padding: 10px 105px; */
+        border-radius: 0px;
+        margin-top: 30px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        left: 432px;
+        bottom: -5px;
+        height: 70px;
+        width: 50%;
+    }
+
+}
