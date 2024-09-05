@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <link rel="stylesheet" href="order-styles.css">
+</head>
+<body>
+
+    <div class="inside">
+        <div class="yourdetails">Enter Your Details</div>
+        <form method="post" class="form" name="google-sheet">
+            <label for="name"></label>
+            <input type="text" id="name" class="nameclass" name="Name" placeholder="Name" required>
+            
+            <label for="name"></label>
+            <input type="text" id="name" class="nameclass" name="Last Name" placeholder="Last Name" required><br><br>
+            
+            <label for="email"></label>
+            <input type="email"  id="email" name="Email" class="emailclass" placeholder="email eg:- abc123@gmail.com" required><br><br>
+            
+            <label for="phone"></label>
+            <input type="tel" id="phone" name="Phone" class="phoneclass" placeholder="Phone Number" required>
+            
+            <label for="phone2"></label>
+            <input type="tel" id="phone2" name="Phone2" class="phoneclass" placeholder="2nd No. (if any)"><br><br>
+            
+            <label for="FlatNo"></label>
+            <input type="text" id="flat" class="flatno" name="Flat No" placeholder="Flat No. / House No" required>
+            
+            <label for="Building"></label>
+            <input type="text" id="building" class="building" name="Building" placeholder="Building"><br><br>
+
+            <label for="Area"></label>
+            <input type="text" id="area" class="area" name="Area" placeholder="Area">
+
+            <label for="city"></label>
+            <input type="text" id="city" class="city" name="City" placeholder="City" required><br><br>
+
+            <label for="state"></label>
+            <input type="text" id="state" class="state" name="State" placeholder="State" required>
+            
+            <label for="Pin Code"></label>
+            <input type="text" id="pincode" class="pincode" name="Pin Code" inputmode="numeric" pattern="\d{6}" maxlength="6" placeholder="Pin Code" required>
+
+                    
+            
+            <!--  -->
+            
+            <!-- Payment Method Selection -->
+            <label for="paymentMethod"></label><br><br>
+            <select id="paymentMethod" class="paymentmethod" name="PaymentMethod" required>
+                <option value="" disabled selected>Select payment method</option>
+                <option value="Online Payment">Online Payment</option>
+                <option value="Cash on Delivery">Cash on Delivery</option>
+            </select>
+            <div class="discount">Flat 15% off In Online Payment</div>
+            
+            <br><br>
+            
+            
+            
+            <!--  -->
+            
+            <!-- Hidden fields for quantity and total price -->
+            <input type="hidden" id="quantityDisplay" name="Quantity">
+            <input type="hidden" id="totalPriceDisplay" name="Total Price">
+                <input type="submit" name="submit" value="submit" class="submit">
+            </form>
+    </div>
+        
+        <script>
+    // Get the URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const quantity = urlParams.get('quantity');
+    const totalPrice = urlParams.get('totalPrice');
+
+    // Set the values in the hidden input fields
+    document.getElementById('quantityDisplay').value = quantity;
+    document.getElementById('totalPriceDisplay').value = totalPrice;
+
+// Form To Gsheets
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbwgOBVSRr9RL8fP1HOA-5r0baw2CWGvXEtUXqGdT_rwz2eUNVLHxCi41ddUPJOCvvqI/exec';
+                const form = document.forms['google-sheet'];
+            
+                form.addEventListener('submit', e => {
+                    e.preventDefault();
+                    
+                    // Get the selected payment method
+                    const paymentMethod = document.getElementById('paymentMethod').value;
+                    
+                    // Submit form data to Google Sheets
+                    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                        .then(response => {
+                            // Check the selected payment method and perform actions accordingly
+                            if (paymentMethod === 'Online Payment') {
+                                // Redirect to the Online Payment page
+                                window.location.href = 'online-payment.html';
+                            } else if (paymentMethod === 'Cash on Delivery') {
+                                // Show an alert for COD
+                                alert("Thanks for Connecting with us..! We Will Contact You Soon...");
+                            }
+                        })
+                        .catch(error => console.error('Error!', error.message));
+                });
+            </script>
+            
+</body>
+</html>

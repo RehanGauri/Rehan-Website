@@ -1,0 +1,106 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping-Websites</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="outer-box">
+            <div class="container">
+                <div class="left_side">
+
+                    <!-- Main Image (Default is blue.jpeg) -->
+                    <img id="bigImage" src="blue.jpeg" width="650px">
+
+                    <!-- Thumbnail Images -->
+                    <div class="smallpics">
+                        <img src="blue.jpeg" class="thumbnail pic1" onclick="showImage(this)">
+                        <img src="red.jpeg" class="thumbnail pic2" onclick="showImage(this)">
+                        <img src="green.png" class="thumbnail pic3" onclick="showImage(this)">
+                        <img src="yellow.jpeg" class="thumbnail pic4" onclick="showImage(this)">
+
+                    </div> <!-- small pics -->
+                </div> <!-- Left Side -->
+
+                <div class="right_side">
+                    <div class="name">This is a Very Good Product</div>
+
+                    <p class="desc-content">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit magni veritatis ad cupiditate
+                        tempore minus amet consequatur dolor eligendi nihil repudiandae sequi ratione, quam labore
+                        dolorem ullam alias? Quod provident magnam dolore officiis dolorum.
+                    </p>
+                    <div class="rating-review">★★★★★ 4.9 | 1136 Reviews</div>
+                    <!-- .star {
+  color: #ffc107;
+  font-size: 18px;
+  margin-right: 5px;
+} -->
+                    <div class="price">
+                        <div class="real_price">$289</div>
+                        <div class="cutprice">$900</div>
+                        <div class="discount">45% off</div>
+                    </div> <!-- Price -->
+
+                    <!-- Quantity -->
+                    <span id="quantity-name"> Select Quantity</span>
+                    <div class="q_container">
+
+                        <button id="buyNowButton">Buy Now</button>
+                        <div class="quantity-selector" id="quantitySelector">
+                            <div class="quantity-box" onclick="toggleDropdown()">
+                                <span id="selectedQuantity">1</Select></span>
+                                <span class="arrow" id="arrow">&#9662;</span>
+                            </div>
+                            <div class="quantity-options" id="quantityOptions">
+                                <div class="option" onclick="selectQuantity(1)">1</div>
+                                <div class="option" onclick="selectQuantity(2)">2</div>
+                                <div class="option" onclick="selectQuantity(3)">3</div>
+                                <div class="option" onclick="selectQuantity(4)">4</div>
+                                <div class="option" onclick="selectQuantity(5)">5</div>
+                                <div class="option" onclick="selectQuantity(6)">6</div>
+                                <div class="option" onclick="selectQuantity(7)">7</div>
+                                <div class="option" onclick="selectQuantity(8)">8</div>
+                                <div class="option" onclick="selectQuantity(9)">9</div>
+                                <div class="option" onclick="selectQuantity(10)">10</div>
+                            </div> <!-- quantity-options -->
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+                </div> <!-- Right Side -->
+
+
+
+
+            </div> <!-- Container-->
+        </div> <!--Outer-Box -->
+    </main>
+
+    <footer></footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
