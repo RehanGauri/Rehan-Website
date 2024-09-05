@@ -569,8 +569,8 @@ body {
     .quantity-box {
         bottom: -20px;
         position: relative;
-        left: 37px;
-        width: 165px;
+        left: 52px;
+        width: 160px;
         border-radius: 0px;
         height: 70px;
         margin: 0 0 0 0;
@@ -578,26 +578,29 @@ body {
 
     .quantity-options {
         position: absolute;
-        left: 37px;
+        left: 57px;
+
     }
 
     #quantity-name {
         font-size: 15px;
         position: relative;
         top: 45px;
+        margin-left: 2px;
     }
 
     #buyNowButton {
         position: relative;
-        /* padding: 10px 105px; */
+        padding: 10px 105px 10px 105px;
         border-radius: 0px;
         margin-top: 30px;
         margin-bottom: 0px;
         margin-left: 0px;
-        left: 432px;
+        left: 427px;
         bottom: -5px;
         height: 70px;
-        width: 50%;
+        width: 215px;
+        
     }
 
 }
