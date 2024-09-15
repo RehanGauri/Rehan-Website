@@ -44,8 +44,8 @@ body {
 .outer-box {
     display: flex;
     background-color: white;
-    height: 90%;
-    width: 100vw;
+    height: 100%;
+    width: 90vw;
     margin: 0 auto;
     /* position: relative; */
 }
