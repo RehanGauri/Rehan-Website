@@ -45,7 +45,7 @@ body {
     display: flex;
     background-color: white;
     height: 90%;
-    width: 90vw;
+    width: 100vw;
     margin: 0 auto;
     /* position: relative; */
 }
